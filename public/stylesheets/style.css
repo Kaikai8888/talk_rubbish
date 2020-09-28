@@ -1,0 +1,18 @@
+.label-img {
+  background-size:cover; 
+  background-position:center;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 250px;
+}
+.engineer {
+  background-image: url('https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg'); 
+}
+
+.designer {
+   background-image: url('https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg'); 
+}
+
+.entrepreneur {
+  background-image: url('https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg');
+}
