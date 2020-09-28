@@ -19,7 +19,18 @@ const targets = Object.keys(tasks)
 
 
 //set view engine
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.engine('handlebars', exphbs({
+  defaultLayout: 'main',
+  helpers: {
+    ifEq: function (a, b, options) {
+      if (a === b) {
+        return options.fn(this)
+      } else {
+        return options.inverse(this)
+      }
+    }
+  }
+}))
 app.set('view engine', 'handlebars')
 
 //set static file
