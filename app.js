@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const target = req.body.target
   const rubbishTalk = talkRubbish(target, tasks[target])
-  res.render('index', { rubbishTalk, target, targets })
+  res.render('index', { targets, target, rubbishTalk, noTarget: !target })
 })
 
 //run the server

@@ -20,6 +20,14 @@
         </div>
         {{/each}}
       </div>
+      {{#if noTarget}}
+      <div class="alert alert-danger" role="alert">
+        <strong>尚未選擇對象！</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {{/if}}
       <div class="row my-4 ml-2 justify-content-between">
         <div class="col-md-2 mb-3">
           <button type="submit" class="btn btn-primary">產生幹話</button>

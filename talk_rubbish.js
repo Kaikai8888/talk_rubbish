@@ -1,6 +1,7 @@
 const phrase = ['很簡單', '很容易', '很快', '很正常']
 
 function talkRubbish(target, task) {
+  if (!target) return
   return `身為一個${target}，${sample(task)}${sample(phrase)}吧！`
 }
 
