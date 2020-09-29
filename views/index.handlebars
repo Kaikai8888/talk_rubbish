@@ -5,16 +5,18 @@
   {{!-- <div class="row justify-content-center"> --}}
   <form action="/" method="POST">
     <div class="row">
-      {{#each targets}}
+      {{#each targetsCH}}
       <div class="form-check col mb-3 mx-1">
         <div class="card border-light" style="margin:0 auto;">
           <div class="d-flex justify-content-center">
-            <label for="{{this}}" class="label-img {{this}}">
+            <label for="{{@key}}">
+              <div class="label-img {{@key}}"></div>
+              <div class="mt-2" style="text-align:center;">{{this}}</div>
             </label>
           </div>
           <div class="card-body d-flex justify-content-center align-items-center">
-            <input type="radio" name="target" value="{{this}}" class="form-check-input" id="{{this}}"
-              {{#ifEq this ../target }} checked {{/ifEq}}>
+            <input type="radio" name="target" value="{{@key}}" class="form-check-input m-0" id="{{@key}}"
+              {{#ifEq @key ../target }} checked {{/ifEq}}>
           </div>
         </div>
       </div>

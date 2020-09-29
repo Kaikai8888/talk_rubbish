@@ -9,10 +9,7 @@ const app = express()
 
 //data
 const tasks = require('./data/tasks.json')
-const targets = Object.keys(tasks)
-
-
-
+const targetsCH = require('./data/targetsCH.json')
 
 //set view engine
 app.engine('handlebars', exphbs({
@@ -36,14 +33,14 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 //set routes
 app.get('/', (req, res) => {
-  res.render('index', { targets })
+  res.render('index', { targetsCH })
 })
 
 app.post('/', (req, res) => {
   const target = req.body.target
-  const rubbishTalk = talkRubbish(target, tasks[target])
+  const rubbishTalk = talkRubbish(target, targetsCH[target], tasks[target])
   res.render('index', {
-    targets, target, rubbishTalk,
+    targetsCH, target, rubbishTalk,
     noTarget: !target
   })
 })

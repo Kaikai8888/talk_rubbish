@@ -1,9 +1,8 @@
 const phrase = require('./data/phrase.json').phrase
-const targetsCH = require('./data/targetsCH.json')
 
-function talkRubbish(target, task) {
+function talkRubbish(target, targetCH, task) {
   if (!target) return
-  return `身為一個${targetsCH[target]}，${sample(task)}${sample(phrase)}吧！`
+  return `身為一個${targetCH}，${sample(task)}${sample(phrase)}吧！`
 }
 
 function sample(arr) {
