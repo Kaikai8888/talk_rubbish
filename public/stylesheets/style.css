@@ -4,6 +4,8 @@
   background-repeat: no-repeat;
   width: 30vh;
   height: 30vh;
+  max-width: 200px;
+  max-height: 200px;
 }
 .engineer {
   background-image: url('https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg'); 
