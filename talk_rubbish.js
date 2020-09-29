@@ -1,4 +1,4 @@
-const phrase = ['很簡單', '很容易', '很快', '很正常']
+const phrase = require('./data/phrase.json').phrase
 
 function talkRubbish(target, task) {
   if (!target) return
