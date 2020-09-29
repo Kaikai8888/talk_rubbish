@@ -13,6 +13,7 @@ const targets = Object.keys(tasks)
 
 
 
+
 //set view engine
 app.engine('handlebars', exphbs({
   defaultLayout: 'main',
@@ -41,7 +42,10 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const target = req.body.target
   const rubbishTalk = talkRubbish(target, tasks[target])
-  res.render('index', { targets, target, rubbishTalk, noTarget: !target })
+  res.render('index', {
+    targets, target, rubbishTalk,
+    noTarget: !target
+  })
 })
 
 //run the server
